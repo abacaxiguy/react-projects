@@ -1,0 +1,35 @@
+.tarefas{
+  margin-top: 30px;
+}
+
+.tarefas li{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 24px;
+  padding: 14px 20px;
+  border-radius: 7px;
+  background: rgb(35,35,35);
+  color: white;
+  margin: 20px 6%;
+}
+
+.tarefas li .edit{
+  margin-right: 10px;
+  color: white;
+}
+
+.tarefas li .delete{
+  color: white;
+}
+
+.tarefas li .edit,
+.tarefas li .delete{
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.tarefas li span{
+  display: flex;
+  align-items: center;
+}
