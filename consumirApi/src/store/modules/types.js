@@ -1,3 +1,7 @@
 export const BUTAO_SUCCESS = 'BUTAO_SUCCESS';
 export const BUTAO_REQUEST = 'BUTAO_REQUEST';
 export const BUTAO_FAILURE = 'BUTAO_FAILURE';
+
+export const LOGIN_SUCCESS = 'LOGIN_SUCCESS';
+export const LOGIN_REQUEST = 'LOGIN_REQUEST';
+export const LOGIN_FAILURE = 'LOGIN_FAILURE';

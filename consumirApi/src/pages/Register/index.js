@@ -12,11 +12,17 @@ export default function Register() {
   const [nome, setNome] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [rpassword, setRpassword] = useState('');
 
   async function handleSubmit(e) {
     e.preventDefault();
 
     let formErrors = false;
+
+    if (rpassword !== password) {
+      formErrors = true;
+      toast.error('Senhas devem ser iguais!');
+    }
 
     if (nome.length < 3 || nome.length > 20) {
       formErrors = true;
@@ -80,6 +86,16 @@ export default function Register() {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             placeholder="Digite sua senha"
+          />
+        </label>
+
+        <label htmlFor="password">
+          Confirmar senha:
+          <input
+            type="password"
+            value={rpassword}
+            onChange={(e) => setRpassword(e.target.value)}
+            placeholder="Repita sua senha"
           />
         </label>
 
