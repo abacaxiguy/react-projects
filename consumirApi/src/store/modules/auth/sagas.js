@@ -60,7 +60,7 @@ function* registerRequest({ payload }) {
     if (status === 401) {
       toast.error('Você precisa fazer login novamente.');
       yield put(actions.loginFailure());
-      history.push('/login');
+      return history.push('/login');
     }
 
     if (errors.length > 0) {
