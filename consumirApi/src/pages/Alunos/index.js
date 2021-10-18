@@ -10,7 +10,12 @@ import {
 
 import { Container } from '../../styles/GlobalStyles';
 import * as colors from '../../config/colors';
-import { AlunoContainer, ProfilePicture } from './styled';
+import {
+  AlunoContainer,
+  ProfilePicture,
+  NovoAluno,
+  NovoAlunoContainer,
+} from './styled';
 import axios from '../../services/axios';
 import history from '../../services/history';
 
@@ -61,7 +66,11 @@ export default function Alunos() {
   return (
     <Container>
       <Loading isLoading={isLoading} />
-      <h1>Alunos</h1>
+      <NovoAlunoContainer>
+        <h1>Alunos</h1>
+        <NovoAluno to="/aluno/">Novo aluno</NovoAluno>
+      </NovoAlunoContainer>
+
       <AlunoContainer>
         {alunos.map((aluno, index) => (
           <div key={String(aluno.id)}>
