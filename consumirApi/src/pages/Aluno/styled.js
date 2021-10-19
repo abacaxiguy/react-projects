@@ -27,3 +27,36 @@ export const Form = styled.form`
     }
   }
 `;
+
+export const Title = styled.h1`
+  text-align: center;
+`;
+
+export const ProfilePicture = styled.div`
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 0 20px;
+  position: relative;
+
+  img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+  }
+
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    position: absolute;
+    bottom: 0;
+    color: #fff;
+    background: ${colors.primaryColor};
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+`;
